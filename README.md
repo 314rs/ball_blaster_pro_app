@@ -7,9 +7,12 @@ Remote controll app for the Ball Blaster Pro roboter developed at TUHH WorkINGLa
 ## Getting Started
 
 ```sh
-flutter run flutter_launcher_icons
-flutter run rename_app:main all="Ball Blaster Pro"
+flutter pub run flutter_launcher_icons
+flutter pub run rename_app:main all="Ball Blaster Pro"
 ```
+
+`_server` of `tcp_socket_connection` package has to be renamed to `server`.
+
 
 This project is a starting point for a Flutter application.
 
