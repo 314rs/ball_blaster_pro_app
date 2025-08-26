@@ -97,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
     shootMotor.name = "Shooting Motor";
     shootMotor.min = -50;
-    shootMotor.max = 127;
+    shootMotor.max = 64 ; // 127;
     intakeMotor.name = "Intake Motor";
     intakeMotor.min = -2048;
     intakeMotor.max = 2047;
@@ -128,6 +128,10 @@ class _MyHomePageState extends State<MyHomePage> {
     tcpMessage.buffer.asByteData().setInt8(15, 0);
 
     socketConnection.server?.add(tcpMessage);
+
+    // if (socketConnection.isConnected()) {
+    //   socketConnection.sendMessage(String.fromCharCodes(tcpMessage));
+    // }
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //
